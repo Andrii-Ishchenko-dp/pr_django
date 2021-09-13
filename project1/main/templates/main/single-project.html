@@ -1,0 +1,41 @@
+{% extends 'main/base.html'%}
+
+{% block title %}
+{{title}}
+{%endblock%}
+
+{% block content %}
+    <h2> Проект</h2>
+
+        <form method="post">
+        {%csrf_token%}
+        <div class="container">
+            <label class="form-label"> Название таблицы</label>
+            <div class="col-4">{{ project.name_task }}</div><br>
+            <label class="form-label"> Разделитель колонок</label>
+            <div class="col-4">{{ project.column_sep }}</div><br>
+            <label class="form-label"> Скобки</label>
+            <div class="col-4">{{ project.str_char }}</div>
+            <br>
+            <h4> Столбцы таблицы</h4>
+            <div class="row">
+                <div class="col-4">
+                    <label class="form-label"> Название столбца</label><br>
+                    {{ project.title }}
+                </div>
+                <div class="col-4">
+                    <label class="form-label"> Тип</label><br>
+                    {{ project.title2 }}
+                </div>
+
+                <div class="col-4">
+                    <label class="form-label"> Order</label><br>
+                    {{ project.task }}
+                </div>
+            </div>
+        </div>
+        <br>
+        <span>{{error}}</span>
+    </form>
+
+{%endblock%}
