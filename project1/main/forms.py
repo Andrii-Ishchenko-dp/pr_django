@@ -1,5 +1,5 @@
 from .models import Task
-from django.forms import ModelForm, TextInput
+from django.forms import ModelForm, TextInput, Select
 from  django.contrib.auth.forms import UserCreationForm
 from  django.contrib.auth.models import User
 
@@ -38,12 +38,11 @@ class TaskForm(ModelForm):
                 "class": "form-control",
                 "placeholder": "Введите название"
             }),
-            "str_char": TextInput(attrs={
-                "class": "form-control",
-                "placeholder": "Введите название"
-            }),
-            "column_sep": TextInput(attrs={
-                "class": "form-control"})
+            "str_char": Select(attrs={
+                "class": "form-control"
+            }, choices= (['фигурные', '{}'], ['квадратные', '[]'])),
+            "column_sep": Select(attrs={
+                "class": "form-control"}, choices=(['Точка', 'Точка'], ['Запятая', 'Запятая']))
         }
 
 
