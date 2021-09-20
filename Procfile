@@ -1,1 +1,1 @@
-web: gunicorn pr_django.wsgi
+web: gunicorn pr_django.wsgi --log-file-
