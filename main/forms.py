@@ -8,7 +8,7 @@ from  django.contrib.auth.models import User
 class TaskForm(ModelForm):
     class Meta:
         model = Task
-        fields = ["title",'title2',"task","name_task","column_sep","str_char"]
+        fields = ["title",'title2',"task","name_task","column_sep"]
         widgets = {
             "title": TextInput(attrs={
                 "class":"form-control",
@@ -28,7 +28,7 @@ class TaskForm(ModelForm):
             }),
             "name_task": TextInput(attrs={
                 "class": "form-control",
-                "placeholder": "Введите таблицы"
+                "placeholder": "Введите имя"
             }),
             "title2": TextInput(attrs={
                 "class": "form-control",
@@ -41,10 +41,15 @@ class TaskForm(ModelForm):
             "str_char": Select(attrs={
                 "class": "form-control"
             }, choices= (['фигурные', '{}'], ['квадратные', '[]'])),
-            "column_sep": Select(attrs={
-                "class": "form-control"}, choices=(['Точка', 'Точка'], ['Запятая', 'Запятая']))
+            "column_sep": TextInput(attrs={
+                "class": "form-control",
+                "placeholder": "Введите фамилию"})
         }
 
+
+# "str_char": Select(attrs={
+#                 "class": "form-control"
+#             }, choices= (['фигурные', '{}'], ['квадратные', '[]']))
 
 class CreateUserForm(UserCreationForm):
     class Meta:
