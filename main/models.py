@@ -1,7 +1,6 @@
 from django.db import models
 
 
-
 class Task(models.Model):
     name_task = models.CharField('Имя', max_length=50)
     surname = models.CharField('Фамилия', max_length=50, default='')
@@ -10,7 +9,6 @@ class Task(models.Model):
     title2 = models.CharField('Город', max_length=50)
     task = models.CharField('Улица', max_length=50)
     created_time = models.DateTimeField(auto_now_add=True)
-
 
 
     def __str__(self):
