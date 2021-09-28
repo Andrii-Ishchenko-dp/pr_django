@@ -9,26 +9,26 @@
     <form method="post">
         {%csrf_token%}
         <div class="container">
-            <label class="form-label"> Название таблицы</label>
+            <label class="form-label"><b>Имя</b> </label>
             <div class="col-4">{{ form.name_task }}</div><br>
-            <label class="form-label"> Разделитель колонок</label>
-            <div class="col-4">{{ form.column_sep }}</div><br>
-            <label class="form-label"> Скобки</label>
-            <div class="col-4">{{ form.str_char }}</div>
+            <label class="form-label"> <b>Фамилия</b></label>
+            <div class="col-4">{{ form.surname }}</div><br>
+            <label class="form-label"> <b>Телефон</b></label>
+            <div class="col-4">{{ form.phone_num }}</div>
             <br>
-            <h4> Столбцы таблицы</h4>
+            <h4> Адрес</h4>
             <div class="row">
                 <div class="col-4">
-                    <label class="form-label"> Название столбца</label>
+                    <label class="form-label"> <b>Страна</b></label>
                     {{ form.title }}
                 </div>
                 <div class="col-4">
-                    <label class="form-label"> Тип</label>
+                    <label class="form-label"> <b>Город</b></label>
                     {{ form.title2 }}
                 </div>
 
                 <div class="col-4">
-                    <label class="form-label"> Order</label>
+                    <label class="form-label"> <b>Улица</b></label>
                     {{ form.task }}
                 </div>
             </div>

@@ -19,13 +19,13 @@
 <body style="margin-right: 40px">
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-               <span style="margin-left: 40px"  class="fs-4">Elect company</span>
+               <span style="margin-left: 40px"  class="fs-4">Адресная книга</span>
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Главная страница</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">Планы по разработке</a>
-          <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create' %}">Добавить проект</a>
+          <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'create' %}">Добавить контакт</a>
       </nav>
         <span class="hello-msg">Hello, {{request.user}}</span>
         <span class="hello-msg" ><a href="{%url 'logout' %}">Logout</a></span>

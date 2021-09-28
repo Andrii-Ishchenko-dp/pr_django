@@ -9,7 +9,7 @@ from django.contrib.auth.decorators import login_required
 
 @login_required(login_url='login')
 def index(request):
-    tasks = Task.objects.order_by('-id')[:3]
+    tasks = Task.objects.order_by('-id')[:5]
     return render(request,'main/index.html', {'title':'Главная страница сайта', 'tasks': tasks})
 
 

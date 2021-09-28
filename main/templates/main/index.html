@@ -5,11 +5,11 @@
 {%endblock%}
 
 {% block content %}
-    <h1> Проекты</h1>
+    <h1> Контакты</h1>
 <table>
     <thead>
         <tr>
-            <th>Name</th>
+            <th>Как зовут</th>
             <th> </th>
         </tr>
     </thead>
@@ -19,10 +19,10 @@
             {%if tasks%}
                 {% for element in tasks%}
                 <tr >
-                    <td><a href="{%url 'project' element.id%}">{{element.name_task}}</a><br>
+                    <td><a style="margin-right: 40px" href="{%url 'project' element.id%}">{{element.name_task}} {{element.surname}}</a><br>
                     </td>
-                    <td><a href="{% url 'update' element.id%}">Edit</a></td>
-                    <td><a href="{% url 'delete' element.id%}">Delete</a></td>
+                    <td><a style="margin-right: 10px" href="{% url 'update' element.id%}">Изменить</a></td>
+                    <td><a href="{% url 'delete' element.id%}">Удалить</a></td>
                 </tr>
                 {%endfor%}
             {%else%}
