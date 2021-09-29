@@ -41,6 +41,8 @@ def create(request):
     }
     return render(request, 'main/create.html', context)
 
+
+@login_required(login_url='login')
 def updateProject(request,pk):
     error = ""
     project = Task.objects.get(id=pk)
@@ -60,6 +62,8 @@ def updateProject(request,pk):
     }
     return render(request, 'main/create.html', context)
 
+
+@login_required(login_url='login')
 def deleteProject(request,pk):
     project = Task.objects.get(id=pk)
 
@@ -67,6 +71,7 @@ def deleteProject(request,pk):
         project.delete()
         return redirect("home")
     return render(request,'main/delete.html',{object:project})
+
 
 def loginPage(request):
     if request.user.is_authenticated:
