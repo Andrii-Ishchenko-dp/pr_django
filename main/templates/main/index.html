@@ -5,7 +5,23 @@
 {%endblock%}
 
 {% block content %}
-    <h1> Контакты</h1>
+<h1> Контакты</h1>
+<div class="row-1">
+    <div class="col-2">
+        <div class="card card-body">
+            <form method="get">
+                {{myFilter.form}}
+
+
+                <button class="btn btn-primary" type="submit">
+                    Поиск</button>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
 <table>
     <thead>
         <tr>

@@ -4,13 +4,17 @@ from .forms import TaskForm, CreateUserForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout, get_user
 from django.contrib.auth.decorators import login_required
-
+from .filters import NameFilter
 
 
 @login_required(login_url='login')
 def index(request):
-    tasks = Task.objects.order_by('-id')[:5]
-    return render(request,'main/index.html', {'title':'Главная страница сайта', 'tasks': tasks})
+    # tasks = Task.objects.order_by('-id')[:5]
+    tasks = Task.objects.all()
+
+    myFilter = NameFilter(request.GET, queryset=tasks)
+    tasks = myFilter.qs
+    return render(request,'main/index.html', {'title':'Главная страница сайта', 'tasks': tasks, 'myFilter':myFilter})
 
 
 @login_required(login_url='login')
