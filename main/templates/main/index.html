@@ -6,14 +6,14 @@
 
 {% block content %}
 <h1> Контакты</h1>
-<div class="row-1">
-    <div class="col-2">
-        <div class="card card-body">
-            <form method="get">
+<div class="row-3">
+    <div>
+        <div class="card form-control">
+            <form class="col-8" method="get">
                 {{myFilter.form}}
 
 
-                <button class="btn btn-primary" type="submit">
+                <br><button class="btn btn-primary" type="submit">
                     Поиск</button>
             </form>
         </div>
@@ -35,11 +35,12 @@
             {%if tasks%}
                 {% for element in tasks%}
                 <tr >
-                    <td><a style="margin-right: 40px" href="{%url 'project' element.id%}">{{element.name_task}} {{element.surname}}</a><br>
+                    <td><a class="h5" style="margin-right: 40px" href="{%url 'project' element.id%}">{{element.name_task}} {{element.surname}}</a><br>
                     </td>
-                    <td><a style="margin-right: 10px" href="{% url 'update' element.id%}">Изменить</a></td>
-                    <td><a href="{% url 'delete' element.id%}">Удалить</a></td>
+                    <td><a style="margin-right: 10px" class="btn btn-primary" href="{% url 'update' element.id%}">Изменить</a></td>
+                    <td><a class="btn btn-primary" href="{% url 'delete' element.id%}" >Удалить</a></td>
                 </tr>
+
                 {%endfor%}
             {%else%}
             <p>У нас нет записей</p>

@@ -9,6 +9,7 @@ class Task(models.Model):
     title2 = models.CharField('Город', max_length=50)
     task = models.CharField('Улица', max_length=50)
     created_time = models.DateTimeField(auto_now_add=True)
+    account_pic = models.ImageField(null=True, blank=True)
 
 
     def __str__(self):
