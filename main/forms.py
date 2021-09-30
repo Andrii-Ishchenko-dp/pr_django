@@ -49,7 +49,7 @@ class TaskForm(ModelForm):
 
 # "str_char": Select(attrs={
 #                 "class": "form-control"
-#             }, choices= (['фигурные', '{}'], ['квадратные', '[]']))
+#             }, choices= (['Выбор 1', 'Выбор 1'], ['Выбор 2', 'Выбор 2']))
 
 class CreateUserForm(UserCreationForm):
     class Meta:
