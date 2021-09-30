@@ -1,5 +1,5 @@
 <!doctype html>
-
+{% load static %}
 <style>
     .hello-msg{
         font-size:18px;
@@ -17,11 +17,13 @@
     <link rel ="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
 </head>
 <body style="margin-right: 40px">
+
     <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
                <span style="margin-left: 40px"  class="fs-4">Адресная книга</span>
-      </a>
 
+      </a>
+        <img src="{% static 'images/logo1.png' %}">
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
         <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'home' %}">Главная страница</a>
         <a class="me-3 py-2 text-dark text-decoration-none" href="{% url 'about' %}">Планы по разработке</a>

@@ -13,7 +13,7 @@
                 {{myFilter.form}}
 
 
-                <br><button class="btn btn-primary" type="submit">
+                <br><button class="btn btn-success" type="submit">
                     Поиск</button>
             </form>
         </div>
@@ -37,8 +37,8 @@
                 <tr >
                     <td><a class="h5" style="margin-right: 40px" href="{%url 'project' element.id%}">{{element.name_task}} {{element.surname}}</a><br>
                     </td>
-                    <td><a style="margin-right: 10px" class="btn btn-primary" href="{% url 'update' element.id%}">Изменить</a></td>
-                    <td><a class="btn btn-primary" href="{% url 'delete' element.id%}" >Удалить</a></td>
+                    <td><a style="margin-right: 10px" class="btn btn-success" href="{% url 'update' element.id%}">Изменить</a></td>
+                    <td><a class="btn btn-danger" href="{% url 'delete' element.id%}" >Удалить</a></td>
                 </tr>
 
                 {%endfor%}
