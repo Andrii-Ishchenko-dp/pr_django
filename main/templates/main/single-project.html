@@ -6,7 +6,7 @@
 
 {% block content %}
     <h2>Контакт</h2>
-    <img class="profile_pic" src="{{request.project.account_pic.url}}">
+    <img class="profile_pic" src="{{request.project.Task.account_pic.url}}">
 
         <form method="post">
         {%csrf_token%}
