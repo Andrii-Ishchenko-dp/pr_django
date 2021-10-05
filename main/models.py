@@ -10,7 +10,7 @@ class Task(models.Model):
     task = models.CharField('Улица', max_length=50)
     created_time = models.DateTimeField(auto_now_add=True)
     account_pic = models.ImageField(null=True, blank=True)
-    full_name = models.CharField('Полное имя', max_length=100, default='', unique=True)
+
 
     def __str__(self):
         return  self.name_task
