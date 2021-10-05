@@ -18,6 +18,8 @@ class Task(models.Model):
     class Meta:
         verbose_name = 'Контакт'
         verbose_name_plural = 'Контакты'
+        unique_together = 'name_task', 'surname'
+
 
 # class Review(models.Model):
 #     project = models.ForeignKey(Task, on_delete=models.CASCADE, null= True, blank= True)
