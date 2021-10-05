@@ -8,19 +8,11 @@ from  django.contrib.auth.models import User
 class TaskForm(ModelForm):
     class Meta:
         model = Task
-        fields = ["title",'title2',"task","name_task","surname","phone_num","account_pic"]
+        fields = ["country",'city',"street","name_task","surname","phone_num","account_pic"]
         widgets = {
-            "title": TextInput(attrs={
+            "country": TextInput(attrs={
                 "class":"form-control",
                 "placeholder":"Введите страну"
-            }),
-            "int_min": TextInput(attrs={
-                "class": "form-control",
-                "placeholder": "Введите таблицы"
-            }),
-            "int_max": TextInput(attrs={
-                "class": "form-control",
-                "placeholder": "Введите таблицы"
             }),
             "order": TextInput(attrs={
                 "class": "form-control",
@@ -30,7 +22,7 @@ class TaskForm(ModelForm):
                 "class": "form-control",
                 "placeholder": "Введите имя"
             }),
-            "title2": TextInput(attrs={
+            "city": TextInput(attrs={
                 "class": "form-control",
                 "placeholder": "Введите город"
             }),
