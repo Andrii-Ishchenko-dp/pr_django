@@ -3,8 +3,8 @@ from django.db import models
 
 class Task(models.Model):
     name_task = models.CharField('Имя', max_length=50)
-    surname = models.CharField('Фамилия', max_length=50, default='')
-    phone_num = models.CharField('Номер телефона', max_length=50, default='')
+    surname = models.CharField('Фамилия', max_length=50)
+    phone_num = models.CharField('Номер телефона', max_length=50)
     title = models.CharField('Страна', max_length= 50)
     title2 = models.CharField('Город', max_length=50)
     task = models.CharField('Улица', max_length=50)
