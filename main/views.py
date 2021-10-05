@@ -37,7 +37,7 @@ def create(request):
             form.save()
             return redirect("home")
         else:
-            error = 'Форма была неверной'
+            error = 'При заполнении были использованы недопустимые символы или пользователь с таким Именем и Фамилией уже существует!'
     form = TaskForm()
     context={
         "form": form,
