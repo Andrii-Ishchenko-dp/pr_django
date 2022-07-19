@@ -22,17 +22,18 @@
 
 
 <table>
-    <thead>
-        <tr>
-            <th>Как зовут</th>
-            <th> </th>
-        </tr>
-    </thead>
+
 
     <tbody>
         {% if user == request.user %}
             {%if tasks%}
+            <thead>
+                <tr>
+                    <th>Как зовут</th>
+                </tr>
+            </thead>
                 {% for element in tasks%}
+
                 <tr >
                     <td><a class="h5" style="margin-right: 40px" href="{%url 'project' element.id%}">{{element.name_task}} {{element.surname}}</a><br>
                     </td>
@@ -42,7 +43,7 @@
 
                 {%endfor%}
             {%else%}
-            <p>У нас нет записей</p>
+            <p>Нет записей соответстующих фильтру</p>
             {%endif%}
         {%endif%}
     </tbody>
