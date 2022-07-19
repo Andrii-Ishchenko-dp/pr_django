@@ -26,7 +26,7 @@ class TaskForm(ModelForm):
                 "class": "form-control",
                 "placeholder": "Введите город"
             }),
-            "task": TextInput(attrs={
+            "street": TextInput(attrs={
                 "class": "form-control",
                 "placeholder": "Введите улицу, номер дома..."
             }),
