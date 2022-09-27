@@ -9,8 +9,8 @@ from .filters import NameFilter
 
 @login_required(login_url='login')
 def index(request):
-    # tasks = Task.objects.order_by('-id')[:5]
-    tasks = Task.objects.all()
+    tasks = Task.objects.order_by('-id')[:10]
+    # tasks = Task.objects.all()
 
     myFilter = NameFilter(request.GET, queryset=tasks)
     tasks = myFilter.qs
